@@ -1,0 +1,32 @@
+run = "npm run dev"
+
+[packager]
+language = "nodejs"
+
+[packager.features]
+packageSearch = true
+guessImports = true
+
+[languages.svelte]
+pattern = "**/*.svelte"
+syntax = "svelte"
+
+[languages.svelte.languageServer]
+command = ["svelteserver", "--stdio"]
+
+[languages.javascript]
+pattern = "**/*.js"
+syntax = "javascript"
+
+[languages.javascript.languageServer]
+start = [ "svelteserver", "--stdio" ]
+
+[languages.typescript]
+pattern = "**/*.ts"
+syntax = "typescript"
+
+[languages.typescript.languageServer]
+start = [ "svelteserver", "--stdio" ]
+
+[nix]
+channel = "stable-22_11"
